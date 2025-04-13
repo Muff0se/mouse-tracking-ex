@@ -13,7 +13,7 @@ titleH3.addEventListener('animationend', () => {
 })
 
 function redirectToNyanCat () {
-    window.open('https://youtu.be/2yJgwwDcgV8');
+    window.location.href = 'https://youtu.be/2yJgwwDcgV8';
 }
 
 function wait(ms) {
