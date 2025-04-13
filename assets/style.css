@@ -23,8 +23,8 @@ html, body {
     font-size: 18px;
     background-color: white;
     outline: none;
-    border: none;
-    border-radius: 2px;
+    border: 2px solid black;
+    border-radius: 40px;
     padding: 25px;
     cursor: pointer;
 }
