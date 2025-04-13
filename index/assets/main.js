@@ -13,7 +13,7 @@ document.addEventListener("mousemove", () => {
 })
 
 async function randomButtonPosition () {
-    await wait(20);
+    await wait(10);
     const btnWidth = cathMeButton.offsetWidth;
     const btnHeight = cathMeButton.offsetHeight;
 
@@ -34,3 +34,9 @@ function goToCongratsPage () {
 function wait(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+const blocker = document.querySelector('.blocker');
+
+blocker.addEventListener('animationend', () => {
+    blocker.remove();
+})
