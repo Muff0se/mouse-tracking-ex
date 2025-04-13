@@ -7,6 +7,22 @@ html, body {
     font-family: "Poppins", sans-serif;
 }
 
+.blocker {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    z-index: 1000;
+    animation: 1s slideToTop 1s forwards;
+
+    & h1 {
+        color: #fff;
+    }
+}
+
 .main {
     height: 100vh;
     width: 100vw;
@@ -32,4 +48,13 @@ html, body {
 
 .mouse-pos {
     color: red;
+}
+
+@keyframes slideToTop {
+    from {
+        transform: translateY(0vh);
+    }
+    to {
+        transform: translateY(-100vh);
+    }
 }
