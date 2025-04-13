@@ -18,6 +18,7 @@ html, body {
 }
 
 .button {
+    position: absolute;
     font-family: "Poppins", sans-serif;
     font-size: 18px;
     background-color: white;
@@ -25,4 +26,5 @@ html, body {
     border: none;
     border-radius: 2px;
     padding: 25px;
+    cursor: pointer;
 }
