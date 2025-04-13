@@ -12,7 +12,8 @@ document.addEventListener("mousemove", () => {
     mousePosTrack.textContent = `X: ${x} / Y: ${y}`;
 })
 
-function randomButtonPosition () {
+async function randomButtonPosition () {
+    await wait(20);
     const btnWidth = cathMeButton.offsetWidth;
     const btnHeight = cathMeButton.offsetHeight;
 
@@ -24,6 +25,12 @@ function randomButtonPosition () {
 
     cathMeButton.style.left = left + 'px';
     cathMeButton.style.top = top + 'px';
-    cathMeButton.style.transition = 'all 0.5s';
 }
 
+function goToCongratsPage () {
+    window.location.href = "../congrats-page/congrats.html";
+}
+
+function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
