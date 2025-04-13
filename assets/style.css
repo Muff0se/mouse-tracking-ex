@@ -27,4 +27,5 @@ html, body {
     border-radius: 40px;
     padding: 25px;
     cursor: pointer;
+    transition: all 0.5s;
 }

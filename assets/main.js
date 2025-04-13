@@ -2,7 +2,7 @@ const mousePosTrack = document.getElementById('mousePosTrack');
 const cathMeButton = document.getElementById("cathMeButton");
 
 cathMeButton.addEventListener("mouseenter", () => {
-    randomButtonPosition(0, 1075, 0, 703);
+    randomButtonPosition();
 })
 
 document.addEventListener("mousemove", () => {
@@ -12,9 +12,15 @@ document.addEventListener("mousemove", () => {
     mousePosTrack.textContent = `X: ${x} / Y: ${y}`;
 })
 
-function randomButtonPosition (minX, maxX, minY, maxY) {
-    let left = Math.floor(Math.random() * (maxX - minX + 1)) + minX;
-    let top = Math.floor(Math.random() * (maxY - minY + 1)) + minY;
+function randomButtonPosition () {
+    const btnWidth = cathMeButton.offsetWidth;
+    const btnHeight = cathMeButton.offsetHeight;
+
+    const maxX = window.innerWidth - btnWidth;
+    const maxY = window.innerHeight - btnHeight;
+
+    const left = Math.floor(Math.random() * maxX);
+    const top = Math.floor(Math.random() * maxY);
 
     cathMeButton.style.left = left + 'px';
     cathMeButton.style.top = top + 'px';
