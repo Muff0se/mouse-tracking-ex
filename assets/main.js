@@ -24,5 +24,6 @@ function randomButtonPosition () {
 
     cathMeButton.style.left = left + 'px';
     cathMeButton.style.top = top + 'px';
+    cathMeButton.style.transition = 'all 0.5s';
 }
 
