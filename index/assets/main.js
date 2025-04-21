@@ -13,7 +13,7 @@ document.addEventListener("mousemove", () => {
 })
 
 async function randomButtonPosition () {
-    await wait(10);
+    await wait(0.1);
     const btnWidth = cathMeButton.offsetWidth;
     const btnHeight = cathMeButton.offsetHeight;
 
